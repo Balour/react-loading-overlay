@@ -1,6 +1,6 @@
 {
-  "name": "@speedy4all/react-loading-overlay",
-  "version": "1.0.4",
+  "name": "@Balour/react-loading-overlay",
+  "version": "1.0.5",
   "description": "Loading overlays with fade, spinner, message support.",
   "keywords": [
     "react",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/speedy4all/react-loading-overlay.git"
+    "url": "git+https://github.com/Balour/react-loading-overlay.git"
   },
   "author": {
     "name": "Derrick Pelletier",
