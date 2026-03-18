@@ -5,5 +5,15 @@
   ],
   "plugins": [
     "@babel/plugin-transform-class-properties"
-  ]
+  ],
+  "env": {
+    "es6": {
+      "presets": [
+        ["@babel/preset-env", {
+          "modules": false
+        }],
+        "@babel/preset-react"
+      ]
+    }
+  }
 }
