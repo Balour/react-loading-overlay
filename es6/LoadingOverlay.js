@@ -54,6 +54,7 @@ var LoadingOverlayWrapper = /*#__PURE__*/function (_Component) {
       })).concat(args));
     });
     _this.wrapper = /*#__PURE__*/React.createRef();
+    _this.overlay = /*#__PURE__*/React.createRef();
     _this.state = {
       overflowCSS: {}
     };
@@ -97,12 +98,14 @@ var LoadingOverlayWrapper = /*#__PURE__*/function (_Component) {
         className: this.cx(['wrapper', active && 'wrapper--active'], css(this.getStyles('wrapper', active ? overflowCSS : {})), className)
       }, /*#__PURE__*/React.createElement(CSSTransition, {
         "in": active,
+        nodeRef: this.overlay,
         classNames: "_loading-overlay-transition",
         timeout: fadeSpeed,
         unmountOnExit: true
       }, function (state) {
         return /*#__PURE__*/React.createElement("div", {
           "data-testid": "overlay",
+          ref: _this2.overlay,
           className: _this2.cx('overlay', css(_this2.getStyles('overlay', state))),
           onClick: onClick
         }, /*#__PURE__*/React.createElement("div", {

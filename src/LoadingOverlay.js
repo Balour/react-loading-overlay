@@ -10,6 +10,7 @@ class LoadingOverlayWrapper extends Component {
   constructor (props) {
     super(props)
     this.wrapper = React.createRef()
+    this.overlay = React.createRef()
     this.state = { overflowCSS: {} }
   }
 
@@ -79,6 +80,7 @@ class LoadingOverlayWrapper extends Component {
       >
         <CSSTransition
           in={active}
+          nodeRef={this.overlay}
           classNames='_loading-overlay-transition'
           timeout={fadeSpeed}
           unmountOnExit
@@ -86,6 +88,7 @@ class LoadingOverlayWrapper extends Component {
           {state => (
             <div
               data-testid='overlay'
+              ref={this.overlay}
               className={this.cx('overlay', css(this.getStyles('overlay', state)))}
               onClick={onClick}
             >
